@@ -1,71 +1,130 @@
 # 📦 Inventory Management System
 
-Inventory Management System is a web-based application developed to help businesses manage inventory efficiently. The system allows users to monitor stock availability, manage products, suppliers, categories, purchase transactions, and generate inventory reports through an intuitive interface.
+<p align="center">
+
+![Laravel](https://img.shields.io/badge/Laravel-10.x-red?style=for-the-badge\&logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge\&logo=php)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge\&logo=bootstrap)
+![License](https://img.shields.io/badge/License-Educational-green?style=for-the-badge)
+
+</p>
+
+<p align="center">
+Sistem Manajemen Inventaris berbasis web yang dikembangkan menggunakan <b>Laravel Framework</b> untuk membantu perusahaan atau toko dalam mengelola data persediaan barang secara efisien, mulai dari pengelolaan produk, kategori, supplier, hingga laporan stok.
+</p>
 
 ---
 
-## 🚀 Features
+# 📖 Deskripsi
 
-### Authentication
-- User Login
-- Secure Authentication
-- Role-based Access (if implemented)
+**Inventory Management System** merupakan aplikasi berbasis web yang dirancang untuk mempermudah proses pengelolaan inventaris barang. Sistem ini menyediakan berbagai fitur yang mendukung pencatatan data produk, pemantauan stok, pengelolaan supplier, serta penyajian laporan inventaris secara cepat dan akurat.
 
-### Dashboard
-- Inventory overview
-- Total products
-- Total categories
-- Total suppliers
-- Stock summary
-
-### Product Management
-- Add new products
-- Edit product information
-- Delete products
-- Product image upload
-- Product stock management
-
-### Category Management
-- Create categories
-- Update categories
-- Delete categories
-
-### Supplier Management
-- Add suppliers
-- Edit supplier information
-- Delete suppliers
-
-### Inventory Management
-- Monitor stock
-- Stock updates
-- Product availability tracking
-
-### Reports
-- Inventory reports
-- Stock information
-- Transaction reports (if available)
+Dengan antarmuka yang sederhana dan mudah digunakan, aplikasi ini dapat membantu meningkatkan efisiensi pengelolaan stok serta meminimalisir kesalahan pencatatan data.
 
 ---
 
-# 🛠️ Built With
+# ✨ Fitur Utama
 
-- Laravel
-- PHP
-- MySQL
-- Blade Template Engine
-- Bootstrap
-- HTML5
-- CSS3
-- JavaScript
-- Laragon (Development Environment)
+## 🔐 Authentication
+
+* ✅ Login pengguna
+* ✅ Autentikasi menggunakan Laravel Authentication
+* ✅ Validasi akun
+* ✅ Session Management
+* ✅ Logout
 
 ---
 
-# 📂 Project Structure
+## 📊 Dashboard
 
-```
+Dashboard menampilkan ringkasan informasi inventaris secara real-time, meliputi:
+
+* 📦 Total Produk
+* 🗂️ Total Kategori
+* 🚚 Total Supplier
+* 📈 Ringkasan Stok Barang
+* 📉 Informasi Persediaan
+
+---
+
+## 📦 Manajemen Produk
+
+Fitur untuk mengelola seluruh data produk.
+
+* ➕ Menambahkan produk baru
+* ✏️ Mengubah informasi produk
+* 🗑️ Menghapus produk
+* 🖼️ Upload gambar produk
+* 📦 Mengelola stok produk
+* 🔍 Pencarian produk
+
+---
+
+## 🗂️ Manajemen Kategori
+
+Mengelola kategori produk agar lebih terorganisir.
+
+* ➕ Tambah kategori
+* ✏️ Edit kategori
+* 🗑️ Hapus kategori
+
+---
+
+## 🚚 Manajemen Supplier
+
+Mengelola data pemasok barang.
+
+* ➕ Tambah supplier
+* ✏️ Edit supplier
+* 🗑️ Hapus supplier
+* 📞 Informasi kontak supplier
+
+---
+
+## 📦 Manajemen Inventaris
+
+Mengontrol seluruh stok barang.
+
+* 📈 Monitoring stok
+* 🔄 Update stok
+* ⚠️ Informasi stok tersedia
+* 📦 Riwayat perubahan stok
+
+---
+
+## 📑 Laporan
+
+Menyediakan laporan inventaris yang dapat digunakan sebagai dokumentasi.
+
+* 📋 Laporan data produk
+* 📊 Laporan stok barang
+* 📈 Ringkasan inventaris
+* 🖨️ Cetak laporan *(jika tersedia)*
+
+---
+
+# 🛠️ Teknologi yang Digunakan
+
+| Teknologi      | Keterangan         |
+| -------------- | ------------------ |
+| ⚙️ Laravel     | Framework Backend  |
+| 🐘 PHP         | Bahasa Pemrograman |
+| 🗄️ MySQL      | Database           |
+| 🎨 Blade       | Template Engine    |
+| 💙 Bootstrap 5 | Framework CSS      |
+| 🌐 HTML5       | Struktur Website   |
+| 🎨 CSS3        | Styling            |
+| ⚡ JavaScript   | Interaktivitas     |
+| 💻 Laragon     | Local Development  |
+
+---
+
+# 📂 Struktur Project
+
+```text
 Inventory-ManagementSystem/
-│
+
 ├── app/
 ├── bootstrap/
 ├── config/
@@ -74,22 +133,25 @@ Inventory-ManagementSystem/
 ├── resources/
 ├── routes/
 ├── storage/
+├── tests/
+├── vendor/
 ├── .env.example
+├── artisan
 ├── composer.json
 └── README.md
 ```
 
 ---
 
-# ⚙️ Installation Guide
+# ⚙️ Cara Instalasi
 
-## 1. Clone Repository
+## 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/IRMASENAM/Inventory-ManagementSystem.git
 ```
 
-Move into the project directory.
+Masuk ke folder project
 
 ```bash
 cd Inventory-ManagementSystem
@@ -97,7 +159,7 @@ cd Inventory-ManagementSystem
 
 ---
 
-## 2. Install Dependencies
+## 2️⃣ Install Dependency
 
 ```bash
 composer install
@@ -105,15 +167,15 @@ composer install
 
 ---
 
-## 3. Create Environment File
+## 3️⃣ Buat File Environment
 
-Copy the environment file.
+Linux / Mac
 
 ```bash
 cp .env.example .env
 ```
 
-If using Windows:
+Windows
 
 ```bash
 copy .env.example .env
@@ -121,7 +183,7 @@ copy .env.example .env
 
 ---
 
-## 4. Generate Application Key
+## 4️⃣ Generate Application Key
 
 ```bash
 php artisan key:generate
@@ -129,9 +191,9 @@ php artisan key:generate
 
 ---
 
-## 5. Configure Database
+## 5️⃣ Konfigurasi Database
 
-Open the `.env` file and update the database configuration.
+Edit file **.env**
 
 ```env
 DB_CONNECTION=mysql
@@ -144,29 +206,31 @@ DB_PASSWORD=
 
 ---
 
-## 6. Create Database
+## 6️⃣ Membuat Database
 
-Create a new MySQL database named
+Buat database baru dengan nama
 
-```
+```text
 inventory_db
 ```
 
-using phpMyAdmin or MySQL Workbench.
+Menggunakan:
+
+* phpMyAdmin
+* MySQL Workbench
+* HeidiSQL
 
 ---
 
-## 7. Import Database
+## 7️⃣ Import Database
 
-If this repository includes an SQL file:
+Jika repository menyediakan file SQL
 
-```
+```text
 database/inventory.sql
 ```
 
-Import it into MySQL using phpMyAdmin.
-
-or
+Import menggunakan phpMyAdmin atau terminal
 
 ```sql
 SOURCE database/inventory.sql;
@@ -174,9 +238,7 @@ SOURCE database/inventory.sql;
 
 ---
 
-## 8. Storage Link
-
-If the application stores uploaded images:
+## 8️⃣ Membuat Storage Link
 
 ```bash
 php artisan storage:link
@@ -184,117 +246,141 @@ php artisan storage:link
 
 ---
 
-## 9. Run the Application
+## 9️⃣ Menjalankan Aplikasi
 
 ```bash
 php artisan serve
 ```
 
-Open
+Buka browser
 
-```
+```text
 http://127.0.0.1:8000
 ```
 
 ---
 
-# 🔑 Default Login
+# 👤 Akun Login
 
-If your project provides demo credentials, add them here.
+Apabila project menyediakan akun demo.
 
-Example:
-
-```
-Email:
+```text
+Email
 admin@example.com
 
-Password:
+Password
 password
 ```
 
-If not available, remove this section.
+Jika tidak tersedia, bagian ini dapat dihapus.
 
 ---
 
-# 📸 Screenshots
+# 🖼️ Tampilan Aplikasi
 
-You can place screenshots inside
+Simpan screenshot pada folder berikut
 
-```
+```text
 public/screenshots/
 ```
 
-Example:
+Contoh
 
-```
+```text
 public/screenshots/dashboard.png
-public/screenshots/products.png
-public/screenshots/categories.png
+public/screenshots/product.png
+public/screenshots/category.png
+public/screenshots/supplier.png
 ```
 
-Then display them:
+Kemudian tampilkan
 
-## Dashboard
+## 📊 Dashboard
 
 ![Dashboard](public/screenshots/dashboard.png)
 
-## Products
+---
 
-![Products](public/screenshots/products.png)
+## 📦 Produk
 
-## Categories
-
-![Categories](public/screenshots/categories.png)
+![Produk](public/screenshots/product.png)
 
 ---
 
-# 📋 Requirements
+## 🗂️ Kategori
 
-- PHP 8.x
-- Composer
-- MySQL
-- Laravel
-- Apache / Nginx
-- Laragon / XAMPP
+![Kategori](public/screenshots/category.png)
 
 ---
 
-# 📁 Database
+## 🚚 Supplier
 
-This project uses MySQL.
+![Supplier](public/screenshots/supplier.png)
 
-If an SQL file is included:
+---
 
-```
+# 📋 Persyaratan Sistem
+
+* ✅ PHP 8.x
+* ✅ Composer
+* ✅ Laravel
+* ✅ MySQL
+* ✅ Apache / Nginx
+* ✅ Laragon / XAMPP
+
+---
+
+# 🗄️ Database
+
+Database yang digunakan adalah **MySQL**.
+
+Apabila tersedia file SQL
+
+```text
 database/inventory.sql
 ```
 
-Import it before running the application.
+Import terlebih dahulu sebelum menjalankan aplikasi.
 
 ---
 
-# 🧩 Main Modules
+# 🧩 Modul Aplikasi
 
-- Authentication
-- Dashboard
-- Products
-- Categories
-- Suppliers
-- Inventory
-- Reports
+* 🔐 Authentication
+* 📊 Dashboard
+* 📦 Produk
+* 🗂️ Kategori
+* 🚚 Supplier
+* 📦 Inventaris
+* 📑 Laporan
 
 ---
 
-# 👨‍💻 Author
+# 🎯 Tujuan Pengembangan
+
+Aplikasi ini dikembangkan untuk:
+
+* 📦 Mempermudah pengelolaan inventaris barang.
+* 📈 Memantau stok secara efisien.
+* 🗂️ Mengorganisasi data produk berdasarkan kategori.
+* 🚚 Mengelola data supplier.
+* 📊 Menyediakan laporan inventaris.
+* ⚡ Mengurangi kesalahan pencatatan stok.
+
+---
+
+# 👨‍💻 Pengembang
 
 **Irma Sena Marliyana**
 
-GitHub
+🌐 GitHub
 
 https://github.com/IRMASENAM
 
 ---
 
-# 📄 License
+# 📄 Lisensi
 
-This project is intended for educational and portfolio purposes.
+Project ini dibuat untuk keperluan pembelajaran, pengembangan portofolio, dan referensi implementasi aplikasi berbasis Laravel.
+
+Silakan digunakan sebagai bahan belajar dengan tetap mencantumkan sumber apabila melakukan modifikasi atau pengembangan lebih lanjut.
