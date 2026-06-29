@@ -1,84 +1,300 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
-</p>
+# 📦 Inventory Management System
 
-<h2 align="center">💼 Eksis Sistem Inventaris</h2>
-
-<p align="center">
-  Sistem berbasis website untuk mengelola data barang, pemasok, dan transaksi keluar-masuk barang di ruang Eksis.
-  <br>
-  <b>Dibangun menggunakan Laravel Framework</b>
-</p>
+Inventory Management System is a web-based application developed to help businesses manage inventory efficiently. The system allows users to monitor stock availability, manage products, suppliers, categories, purchase transactions, and generate inventory reports through an intuitive interface.
 
 ---
 
-## 🚀 Tentang Project
+## 🚀 Features
 
-**Sistem Inventaris Barang Ruang Eksis** merupakan aplikasi manajemen inventaris yang dirancang untuk membantu pencatatan barang-barang di ruang Eksis secara digital, cepat, dan efisien.  
-Melalui sistem ini, pengguna dapat mencatat **barang masuk**, **barang keluar**, serta **melihat laporan lengkap** dalam bentuk PDF atau Excel.
+### Authentication
+- User Login
+- Secure Authentication
+- Role-based Access (if implemented)
+
+### Dashboard
+- Inventory overview
+- Total products
+- Total categories
+- Total suppliers
+- Stock summary
+
+### Product Management
+- Add new products
+- Edit product information
+- Delete products
+- Product image upload
+- Product stock management
+
+### Category Management
+- Create categories
+- Update categories
+- Delete categories
+
+### Supplier Management
+- Add suppliers
+- Edit supplier information
+- Delete suppliers
+
+### Inventory Management
+- Monitor stock
+- Stock updates
+- Product availability tracking
+
+### Reports
+- Inventory reports
+- Stock information
+- Transaction reports (if available)
 
 ---
 
-## ✨ Fitur Utama
+# 🛠️ Built With
 
-- 🔑 **Login Pengguna**
-- 📦 **Manajemen Data Barang**
-  - Create, Read, Update, Delete data barang
-  - Upload foto barang
-- 🏢 **Manajemen Supplier**
-  - Data pemasok barang lengkap
-- 🧾 **Transaksi Barang Masuk & Barang Keluar**
-  - Pencatatan otomatis nomor transaksi
-  - Filter berdasarkan tanggal
-- 📊 **Laporan**
-  - Export ke PDF dan Excel
-  - Filter berdasarkan periode
-- 🔍 **Fitur Pencarian Cepat**
-  - Cari barang berdasarkan nama atau kode
-- 🖼️ **Upload & Tampilkan Gambar Barang**
-- 🧰 **CRUD Lengkap** di seluruh modul
-- 🛡️ **Validasi & Error Handling** user-friendly
+- Laravel
+- PHP
+- MySQL
+- Blade Template Engine
+- Bootstrap
+- HTML5
+- CSS3
+- JavaScript
+- Laragon (Development Environment)
 
 ---
 
-## 🧱 Teknologi yang Digunakan
+# 📂 Project Structure
 
-| Komponen | Teknologi |
-|-----------|------------|
-| Backend | [Laravel 10](https://laravel.com) |
-| Frontend | Blade Template + Bootstrap |
-| Database | MySQL |
-| Export File | DomPDF & Maatwebsite/Excel |
-| Server-side | PHP >= 8.1 |
+```
+Inventory-ManagementSystem/
+│
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── .env.example
+├── composer.json
+└── README.md
+```
 
 ---
 
-## ⚙️ Instalasi
+# ⚙️ Installation Guide
 
-Berikut langkah-langkah untuk menjalankan project ini di lokal:
+## 1. Clone Repository
 
 ```bash
-# 1️⃣ Clone repository
-git clone https://github.com/irmasena.m/eksintas.git
+git clone https://github.com/IRMASENAM/Inventory-ManagementSystem.git
+```
 
-# 2️⃣ Masuk ke folder project
-cd eksintas
+Move into the project directory.
 
-# 3️⃣ Install dependencies
+```bash
+cd Inventory-ManagementSystem
+```
+
+---
+
+## 2. Install Dependencies
+
+```bash
 composer install
-npm install && npm run dev
+```
 
-# 4️⃣ Copy file environment
+---
+
+## 3. Create Environment File
+
+Copy the environment file.
+
+```bash
 cp .env.example .env
+```
 
-# 5️⃣ Konfigurasi database di file .env
-DB_DATABASE=laraveldb
+If using Windows:
+
+```bash
+copy .env.example .env
+```
+
+---
+
+## 4. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+---
+
+## 5. Configure Database
+
+Open the `.env` file and update the database configuration.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=inventory_db
 DB_USERNAME=root
 DB_PASSWORD=
+```
 
-# 6️⃣ Generate key dan migrasi database
-php artisan key:generate
-php artisan migrate --seed
+---
 
-# 7️⃣ Jalankan server lokal
+## 6. Create Database
+
+Create a new MySQL database named
+
+```
+inventory_db
+```
+
+using phpMyAdmin or MySQL Workbench.
+
+---
+
+## 7. Import Database
+
+If this repository includes an SQL file:
+
+```
+database/inventory.sql
+```
+
+Import it into MySQL using phpMyAdmin.
+
+or
+
+```sql
+SOURCE database/inventory.sql;
+```
+
+---
+
+## 8. Storage Link
+
+If the application stores uploaded images:
+
+```bash
+php artisan storage:link
+```
+
+---
+
+## 9. Run the Application
+
+```bash
 php artisan serve
+```
+
+Open
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# 🔑 Default Login
+
+If your project provides demo credentials, add them here.
+
+Example:
+
+```
+Email:
+admin@example.com
+
+Password:
+password
+```
+
+If not available, remove this section.
+
+---
+
+# 📸 Screenshots
+
+You can place screenshots inside
+
+```
+public/screenshots/
+```
+
+Example:
+
+```
+public/screenshots/dashboard.png
+public/screenshots/products.png
+public/screenshots/categories.png
+```
+
+Then display them:
+
+## Dashboard
+
+![Dashboard](public/screenshots/dashboard.png)
+
+## Products
+
+![Products](public/screenshots/products.png)
+
+## Categories
+
+![Categories](public/screenshots/categories.png)
+
+---
+
+# 📋 Requirements
+
+- PHP 8.x
+- Composer
+- MySQL
+- Laravel
+- Apache / Nginx
+- Laragon / XAMPP
+
+---
+
+# 📁 Database
+
+This project uses MySQL.
+
+If an SQL file is included:
+
+```
+database/inventory.sql
+```
+
+Import it before running the application.
+
+---
+
+# 🧩 Main Modules
+
+- Authentication
+- Dashboard
+- Products
+- Categories
+- Suppliers
+- Inventory
+- Reports
+
+---
+
+# 👨‍💻 Author
+
+**Irma Sena Marliyana**
+
+GitHub
+
+https://github.com/IRMASENAM
+
+---
+
+# 📄 License
+
+This project is intended for educational and portfolio purposes.
