@@ -20,7 +20,7 @@
         </div>
 
         <small class="d-block mt-2 text-light-emphasis">
-           Created © 2025 | Source by <strong>EKSIS</strong>
+           Created © Politeknik Negeri Cilacap 2025 | Source by <strong>EKSIS</strong>
         </small>
     </div>
 </footer>
